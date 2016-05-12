@@ -63,7 +63,7 @@ public class TestGame {
 	public void testDisplayManhattanWithLowerCase() {
 		String response = game.displayManhattanWithLowerCase();
 		
-		String[] params = game.generate(4, 5, "manhattan", game.getPattern1());
+		String[] params = game.generate(4, 5, "ManhAtTan", game.getPattern1());
 		String goodResponse = Algo.textToAscii(params);
 		
 		assertEquals("Test failed for display ManhattanWithLowerCase", response, goodResponse);

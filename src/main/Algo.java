@@ -2,6 +2,11 @@ package main;
 
 public class Algo {
 
+	/**
+	 * Generate ASCII Art
+	 * @param String[] param
+	 * @return String
+	 */
 	public static String textToAscii(String[] param) {
 		Integer L = Integer.parseInt(param[0]);
         Integer H = Integer.parseInt(param[1]);
@@ -11,10 +16,10 @@ public class Algo {
         char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         String[][] character = new String[alphabet.length + 1][H];
         
-        //création des lettres
+        //create letter
         Integer nbLetter = 0;
         for (int i = 0; i < L * (alphabet.length + 1); i += L) {
-            //par ligne
+            //for line
             for (int j = 0; j < H; j++) {
                 character[nbLetter][j] = param[3 + j].substring(i, i + L);
             }
@@ -22,11 +27,11 @@ public class Algo {
         }
         
         char[] tabWord = word.toCharArray();
-        //pour chaque ligne
+        //for line
         for (int l = 0; l < H; l++ ) {
-            //pour chaque lettre
+            //for letter
             for (int i = 0; i < tabWord.length; i++) {
-                //recherche de lettre
+                //search a letter
                 Integer index = 26;
                 for (int j = 0; j < alphabet.length; j++) {
                     if (tabWord[i] == alphabet[j]) {
@@ -34,7 +39,7 @@ public class Algo {
                         break;
                     }
                 }
-                //ecriture de la lettre pour cette ligne
+                //write letter for this line
                 exit += character[index][l];
             }
             exit += "\n";

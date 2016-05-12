@@ -8,6 +8,11 @@ import org.junit.Test;
 
 import main.PatternManager;
 
+/**
+ * 
+ * @author valentin
+ *
+ */
 public class Game {
 
 	private PatternManager pattern1 = new PatternManager();
