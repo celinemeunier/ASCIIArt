@@ -5,8 +5,6 @@
  */
 package main;
 
-import test.TestASCIIArt;
-
 /**
  *
  * @author valentin
@@ -17,8 +15,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        TestASCIIArt ascii = new TestASCIIArt();
-        ascii.testManhattanWithLowerCase();
+        Game game = new Game();
+        game.displayManhattanWithLowerCase();
     }
     
 }
