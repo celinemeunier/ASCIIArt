@@ -1,4 +1,5 @@
 package main;
+
 import main.User;
 
 import java.util.ArrayList;
@@ -34,7 +35,6 @@ public class Game {
       
     }
 	
-		
 		
 	 private String[] generate(Integer L, Integer H, String word, PatternManager patern) {
 		  ArrayList<String> param = new ArrayList<>();
