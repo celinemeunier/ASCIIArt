@@ -3,7 +3,7 @@ package main;
 /**
  * @author valentin
  */
-public class GameAscii {
+public class User {
     
     public static String textToAscii(String[] param) {
         Integer L = Integer.parseInt(param[0]);

@@ -11,7 +11,7 @@ import test.TestASCIIArt;
  *
  * @author valentin
  */
-public class ASCIIArt {
+public class Main {
 
     /**
      * @param args the command line arguments

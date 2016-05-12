@@ -1,6 +1,6 @@
 package test;
 
-import main.GameAscii;
+import main.User;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,24 +27,24 @@ public class TestASCIIArt {
     @Test
     public void testLetterE() {
         String[] param = this.generate(4, 5, "E");
-        GameAscii.textToAscii(param);
+        User.textToAscii(param);
     }
     
     @Test
     public void testManhattan() {
         String[] param = this.generate(4, 5, "MANHATTAN");
-        GameAscii.textToAscii(param);
+        User.textToAscii(param);
     }
  
     @Test
     public void testManhattanWithLowerCase() {
         String[] param = this.generate(4, 5, "manhattan");
-        GameAscii.textToAscii(param);
+        User.textToAscii(param);
     }
     
     @Test
     public void testManhattanWithNoLetter() {
         String[] param = this.generate(4, 5, "M@NH@TT@N");
-        GameAscii.textToAscii(param);
+        User.textToAscii(param);
     }
 }
