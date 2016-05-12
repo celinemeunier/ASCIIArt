@@ -40,7 +40,7 @@ public class TestGame {
 		String goodResponse = Algo.textToAscii(params);
 		
 		//test
-		assertEquals("Test fail for display letter E", response, goodResponse);
+		assertEquals("Test failed for display letter E", response, goodResponse);
 	}
 
 	/**
@@ -48,7 +48,12 @@ public class TestGame {
 	 */
 	@Test
 	public void testDisplayManhattan() {
-		fail("Not yet implemented");
+		String response = game.displayManhattan();
+		
+		String[] params = game.generate(4, 5, "MANHATTAN", game.getPattern1());
+		String goodResponse = Algo.textToAscii(params);
+		
+		assertEquals("Test failed for display MANHATTAN", response, goodResponse);
 	}
 
 	/**
@@ -56,7 +61,12 @@ public class TestGame {
 	 */
 	@Test
 	public void testDisplayManhattanWithLowerCase() {
-		fail("Not yet implemented");
+		String response = game.displayManhattanWithLowerCase();
+		
+		String[] params = game.generate(4, 5, "manhattan", game.getPattern1());
+		String goodResponse = Algo.textToAscii(params);
+		
+		assertEquals("Test failed for display ManhattanWithLowerCase", response, goodResponse);
 	}
 
 	/**
@@ -64,7 +74,12 @@ public class TestGame {
 	 */
 	@Test
 	public void testDisplayManhattanWithNoLetter() {
-		fail("Not yet implemented");
+		String response = game.displayManhattanWithNoLetter();
+		
+		String[] params = game.generate(4, 5, "M@NH@TT@N", game.getPattern1());
+		String goodResponse = Algo.textToAscii(params);
+		
+		assertEquals ("Test failed for display ManhattanWithNoLetter", response, goodResponse);
 	}
 
 	/**
@@ -72,7 +87,13 @@ public class TestGame {
 	 */
 	@Test
 	public void testDisplayManhattanWithOtherPattern() {
-		fail("Not yet implemented");
+		String response = game.displayManhattanWithOtherPattern();
+		
+		String[] params = game.generate(20, 11, "MANHATTAN",game.getPattern2());
+		String goodResponse = Algo.textToAscii(params);
+		
+		assertEquals ("Test failed for display ManhattanWithOtherPattern", response, goodResponse);
+		
 	}
 
 }
