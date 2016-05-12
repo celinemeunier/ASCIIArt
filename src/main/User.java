@@ -9,6 +9,7 @@ public class User {
         Integer L = Integer.parseInt(param[0]);
         Integer H = Integer.parseInt(param[1]);
         String word = param[2].toUpperCase();
+        String exit = "";
         
         char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         String[][] character = new String[alphabet.length + 1][H];
@@ -18,7 +19,7 @@ public class User {
         for (int i = 0; i < L * (alphabet.length + 1); i += L) {
             //par ligne
             for (int j = 0; j < H; j++) {
-                character[nbLetter][j] = param[3 + j].substring(i, i + (L - 1));
+                character[nbLetter][j] = param[3 + j].substring(i, i + L);
             }
             nbLetter++;
         }
@@ -37,11 +38,12 @@ public class User {
                     }
                 }
                 //ecriture de la lettre pour cette ligne
-                System.out.print(character[index][l] + " ");
+                System.out.print(character[index][l]);
+                exit += character[index][l];
             }
             System.out.print("\n");
+            exit += "\n";
         }
-        return "";
+        return exit;
     }
-    
 }
