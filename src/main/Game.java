@@ -54,7 +54,7 @@ public class Game {
     public String displayManhattanWithOtherPattern() {
     	return User.soluce(this.generate(20, 11, "MANHATTAN", this.pattern2));
     }
-	
+
 	public String[] generate(Integer L, Integer H, String word, PatternManager patern) {
 		 ArrayList<String> param = new ArrayList<>();
 		 param.add(L.toString());
@@ -72,4 +72,5 @@ public class Game {
 	public PatternManager getPattern2() {
 		return pattern2;
 	}
+
 }
