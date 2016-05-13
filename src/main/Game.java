@@ -1,12 +1,11 @@
 package main;
 
 import main.User;
+import model.PatternManager;
 
 import java.util.ArrayList;
 
 import org.junit.Test;
-
-import main.PatternManager;
 
 
 /*
@@ -15,8 +14,12 @@ import main.PatternManager;
 public class Game {
 	
 	public static void main(String[] args) {
-		
-        
+		Game game = new Game();
+		game.displayLetterE();
+		game.displayManhattan();
+		game.displayManhattanWithLowerCase();
+		game.displayManhattanWithNoLetter();
+		game.displayManhattanWithOtherPattern();
     }
 	
 	private PatternManager pattern1 = new PatternManager();

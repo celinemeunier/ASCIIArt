@@ -13,6 +13,16 @@ public class Algo {
         String word = param[2].toUpperCase();
         String exit = "";
         
+        //check nbParam
+        if (H != param.length - 3)
+        	return "Invalid number of param by height";
+        
+        //check length
+        if (L < 0 || L > 30)
+        	return "Invalid number for width";
+        if (H < 0 || H > 30)
+        	return "Invalid number for height";
+        
         char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         String[][] character = new String[alphabet.length + 1][H];
         
