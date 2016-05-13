@@ -11,13 +11,14 @@ public class User {
      */
     public static void main(String[] args) {
     	soluce(args);
-	/**
+	
+    }
+    
+    /**
 	 * Soluce return by User
 	 * @param param
 	 * @return String
 	 */
-    }
-    
     static String soluce(String[] param) {
     	String result = Algo.textToAscii(param);
     	System.out.println(result);
