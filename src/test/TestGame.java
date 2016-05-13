@@ -5,8 +5,11 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.github.javafaker.Faker;
 
 import main.Game;
 import main.Algo;
@@ -27,6 +30,7 @@ public class TestGame {
 	public static void setUpBeforeClass() throws Exception {
 		game = new Game();
 	}
+
 
 	/**
 	 * Test method for {@link main.Game#displayLetterE()}. 
