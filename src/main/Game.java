@@ -8,13 +8,17 @@ import org.junit.Test;
 
 import main.PatternManager;
 
-/**
- * 
- * @author valentin
- *
+
+/*
+ * Generate two patterns with PatternManager for create ascii letters
  */
 public class Game {
-
+	
+	public static void main(String[] args) {
+		
+        
+    }
+	
 	private PatternManager pattern1 = new PatternManager();
 	private PatternManager pattern2 = new PatternManager();
 	
@@ -40,6 +44,14 @@ public class Game {
       
     }	
 	
+	/*
+	 * Soluce return by User 
+	 * @Param Integer L
+	 * @Param Integer H
+	 * @Param String word
+	 * @Param PatternManager Pattern
+	 * @Return String
+	 */
     public String displayLetterE() {
         return User.soluce(this.generate(4, 5, "E", this.pattern1));
     }
@@ -49,7 +61,7 @@ public class Game {
     }
  
     public String displayManhattanWithLowerCase() {
-    	return User.soluce(this.generate(4, 5, "manhattan", this.pattern1));
+    	return User.soluce(this.generate(4, 5, "ManhAtTan", this.pattern1));
     }
     
     public String displayManhattanWithNoLetter() {
@@ -59,21 +71,36 @@ public class Game {
     public String displayManhattanWithOtherPattern() {
     	return User.soluce(this.generate(20, 11, "MANHATTAN", this.pattern2));
     }
-
-	public String[] generate(Integer L, Integer H, String word, PatternManager patern) {
+  
+    /*
+     * Add all the parameters from an array List into a string array
+     * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
+     * 
+     *  @Return String[]
+     */
+    
+	public String[] generate(Integer L, Integer H, String word, PatternManager pattern) {
 		 ArrayList<String> param = new ArrayList<>();
 		 param.add(L.toString());
 		 param.add(H.toString());
 		 param.add(word);
-		 param.addAll(patern.getLines());
+		 param.addAll(pattern.getLines());
 		 String[] stringArray = param.toArray(new String[0]);
 		 return stringArray;
 	}
 
+	/*
+	 * @Return PatternManager
+	 */
 	public PatternManager getPattern1() {
 		return pattern1;
 	}
-
+	/*
+	 * @Return PatternManager
+	 */
 	public PatternManager getPattern2() {
 		return pattern2;
 	}

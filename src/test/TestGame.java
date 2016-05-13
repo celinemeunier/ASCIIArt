@@ -20,6 +20,7 @@ public class TestGame {
 	private static Game game;
 	
 	/**
+	 * Generate a new game before tests
 	 * @throws java.lang.Exception
 	 */
 	@BeforeClass
@@ -28,8 +29,15 @@ public class TestGame {
 	}
 
 	/**
-	 * Test method for {@link main.Game#displayLetterE()}.
-	 */
+	 * Test method for {@link main.Game#displayLetterE()}. 
+	 * Verify if response is equals to goodResponse
+	 * 
+     * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
+     * 
+     */
 	@Test
 	public void testDisplayLetterE() {
 		//get response user
@@ -45,6 +53,12 @@ public class TestGame {
 
 	/**
 	 * Test method for {@link main.Game#displayManhattan()}.
+	 * Verify if response is equals to goodResponse
+	 * 
+	 * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
 	 */
 	@Test
 	public void testDisplayManhattan() {
@@ -58,6 +72,12 @@ public class TestGame {
 
 	/**
 	 * Test method for {@link main.Game#displayManhattanWithLowerCase()}.
+	 * Verify if response is equals to goodResponse
+	 * 
+	 * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
 	 */
 	@Test
 	public void testDisplayManhattanWithLowerCase() {
@@ -71,6 +91,12 @@ public class TestGame {
 
 	/**
 	 * Test method for {@link main.Game#displayManhattanWithNoLetter()}.
+	 * Verify if response is equals to goodResponse
+	 * 
+	 * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
 	 */
 	@Test
 	public void testDisplayManhattanWithNoLetter() {
@@ -84,6 +110,12 @@ public class TestGame {
 
 	/**
 	 * Test method for {@link main.Game#displayManhattanWithOtherPattern()}.
+	 * Verify if response is equals to goodResponse
+	 * 
+	 * @Param Integer L
+     * @Param Integer H
+     * @Param String Word
+     * @Param PatternManager pattern
 	 */
 	@Test
 	public void testDisplayManhattanWithOtherPattern() {
